@@ -9,9 +9,9 @@ export default {
         red: "#DC4492",
         yellow: "#FDCC49",
         gray: "#EDEDED",
-        "deep-blue": "#010026",
-        "dark-gray": "#757575",
-        "opaque-black": "rgba(0,0,0,0.35)",
+        dark_blue: "#010026",
+        dark_gray: "#757575",
+        opaque_black: "rgba(0,0,0,0.35)",
       },
       backgroundImage: (theme) => ({
         "gradient-rainbow":
