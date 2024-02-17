@@ -13,10 +13,6 @@ export default {
         dark_gray: "#757575",
         opaque_black: "rgba(0,0,0,0.35)",
       },
-      backgroundImage: (theme) => ({
-        "gradient-rainbow":
-          "linear-gradient(81.66deg, #00b5ee 7.21%, #ff45a4 45.05%, #ffba00 78.07% )",
-      }),
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "serif"],

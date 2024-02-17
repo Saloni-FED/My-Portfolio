@@ -3,6 +3,7 @@ import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from "./components/Navbar";
 import DotGroup from "./components/DotGroup";
 import Landing from "./components/Landing"
+import About from "./components/About";
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -20,6 +21,7 @@ function App() {
         )}
         <Landing setSelectedPage={setSelectedPage}/>
       </div>
+      <About selectedPage = { selectedPage }  setSelectedPage={setSelectedPage}/>
     </div>
   );
 }
