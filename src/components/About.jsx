@@ -1,29 +1,44 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import TabButtons from "./TabButtons";
+import Skills from "../sections/Skills"; // Import the Skills component
+import useMediaQuery from "../hooks/useMediaQuery";
+import Education from "../sections/Education";
 const About = ({ selectedPage, setSelectedPage }) => {
   const [tab, setTab] = useState("Skills");
+
   const handleTabs = (currentTab) => {
     setTab(currentTab);
   };
+
   return (
-    <section id="about relative ">
-      <motion.div className="flex justify-center ">
-        <div className="basis-3/4  flex flex-col items-center justify-center">
+    <section id="about relative">
+      <motion.div
+        className="flex justify-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, y: -50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+      >
+        <div className="sm:basis-3/4 flex flex-col items-center justify-center w-full">
           <h1 className="text-4xl font-playfair font-bold">
             About <span className="text-purple-400">Me</span>
           </h1>
-          <p className="text-center font-opensans text-lg font-medium md:absolute md:mt-48  md:w-1/2 w-full">
+          <p className="text-center font-opensans text-lg font-medium">
             I'm a Full Stack Developer with a passion for creating responsive
-            and interactive Web application. I have experience working with{" "}
+            and interactive Web applications. I have experience working with{" "}
             <span>
-              HTML5, CSS3, Javascript, React js, MongoDB, Node js, Express js,
-              SQL, Bootstrap, Git and C++{" "}
-            </span>
+              HTML5, CSS3, JavaScript, React.js, MongoDB, Node.js, Express.js,
+              SQL, Bootstrap, Git, and C++.
+            </span>{" "}
             I'm a quick learner and always excited to work with others to create
             an amazing app.
           </p>
-          <div className="md:absolute md:mt-96 flex gap-4 md:text-base text-sm font-playfair">
+          <div className="flex gap-4 md:text-base text-sm font-playfair">
             <TabButtons
               active={tab === "Skills"}
               selectedTab={() => handleTabs("Skills")}
@@ -37,6 +52,7 @@ const About = ({ selectedPage, setSelectedPage }) => {
               Education
             </TabButtons>
           </div>
+          {tab === "Skills" ?  <Skills /> : <Education/>}
         </div>
       </motion.div>
     </section>
