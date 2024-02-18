@@ -5,6 +5,7 @@ import DotGroup from "./components/DotGroup";
 import Landing from "./components/Landing";
 import Line from "./components/Line";
 import About from "./components/About";
+import Projects from "./components/Projects";
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -25,6 +26,10 @@ function App() {
       <Line />
       <div className="sm:w-5/6 md:w-full mx-auto md:h-full w-screen">
         <About selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+      </div>
+      <Line/>
+      <div className="sm:w-5/6 md:w-full mx-auto md:h-full w-screen">
+        <Projects selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       </div>
     </div>
   );
