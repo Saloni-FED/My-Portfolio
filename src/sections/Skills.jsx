@@ -11,7 +11,7 @@ const Skills = () => {
   return (
     <section className="">
       <motion.div
-        className="text-4xl font-bold grid sm:grid-cols-3 gap-5"
+        className="text-4xl font-bold grid sm:grid-cols-3 grid-cols-3 gap-5"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
