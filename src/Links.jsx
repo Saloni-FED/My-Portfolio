@@ -1,7 +1,7 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 const Links = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCase = page.toLowerCase();
-  console.log(lowerCase)
+  
   return (
     <AnchorLink
       className={`${

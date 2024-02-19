@@ -4,7 +4,7 @@ import Links from "../Links";
 import { CiMenuBurger } from "react-icons/ci";
 import { MdCancel } from "react-icons/md";
 const Navbar = ({ setSelectedPage, selectedPage }) => {
-  console.log(selectedPage)
+  // console.log(selectedPage)
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
   return (
@@ -23,18 +23,14 @@ const Navbar = ({ setSelectedPage, selectedPage }) => {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Links
-              page="Skill"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
+          
             <Links
               page="Projects"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Links
-              page="Contact Me"
+              page="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
@@ -60,17 +56,12 @@ const Navbar = ({ setSelectedPage, selectedPage }) => {
                     setSelectedPage={setSelectedPage}
                   />
                   <Links
-                    page="Skill"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                  <Links
                     page="Projects"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
                   <Links
-                    page="Contact Me"
+                    page="Contact"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />

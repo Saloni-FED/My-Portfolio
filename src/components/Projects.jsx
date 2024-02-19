@@ -9,7 +9,7 @@ const Projects = () => {
   const cardImage = [image_1, image_2, image_3, image_4, image_5];
 
   return (
-    <section id="projects">
+    <section id="projects" >
       <motion.div
         className="md:w-2/4 mx-auto text-center"
         initial="hidden"

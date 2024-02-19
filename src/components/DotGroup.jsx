@@ -1,38 +1,36 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
+
 const DotGroup = ({ selectedPage, setSelectedPage }) => {
-  // console.log(selectedPage);
-  const seletctedStyles = "relative bg-purple-700 w-4 h-4";
+  const selectedStyles = "bg-purple-700 w-4 h-4";
   return (
     <div className="flex flex-col gap-6 fixed top-[60%] right-7">
       <AnchorLink
         className={`${
-          selectedPage == "home" ? seletctedStyles : "bg-white"
-        }  w-3 h-3 rounded-full`}
+          selectedPage.toLowerCase() === "home" ? selectedStyles : "bg-white"
+        } w-3 h-3 rounded-full cursor-pointer`}
         href="#home"
+        onClick={() => setSelectedPage("home")}
       />
       <AnchorLink
         className={`${
-          selectedPage == "about" ? seletctedStyles : "bg-white"
-        }  w-3 h-3 rounded-full`}
+          selectedPage.toLowerCase() === "about" ? selectedStyles : "bg-white"
+        } w-3 h-3 rounded-full cursor-pointer`}
         href="#about"
+        onClick={() => setSelectedPage("about")}
       />
       <AnchorLink
         className={`${
-          selectedPage == "skill" ? seletctedStyles : "bg-white"
-        }  w-3 h-3 rounded-full`}
-        href="#skill"
-      />
-      <AnchorLink
-        className={`${
-          selectedPage == "projects" ? seletctedStyles : "bg-white"
-        }  w-3 h-3 rounded-full`}
+          selectedPage.toLowerCase() === "projects" ? selectedStyles : "bg-white"
+        } w-3 h-3 rounded-full cursor-pointer`}
         href="#projects"
+        onClick={() => setSelectedPage("projects")}
       />
       <AnchorLink
         className={`${
-          selectedPage == "contact me" ? seletctedStyles : "bg-white"
-        }  w-3 h-3 rounded-full`}
-        href="#contact me"
+          selectedPage.toLowerCase() === "contact" ? selectedStyles : "bg-white"
+        } w-3 h-3 rounded-full cursor-pointer`}
+        href="#contact"
+        onClick={() => setSelectedPage("contact")}
       />
     </div>
   );

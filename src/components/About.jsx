@@ -12,9 +12,9 @@ const About = ({ selectedPage, setSelectedPage }) => {
   };
 
   return (
-    <section id="about relative">
+    <section id="about" className="w-full">
       <motion.div
-        className="flex justify-center"
+        className="flex justify-center md:relative"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -24,11 +24,11 @@ const About = ({ selectedPage, setSelectedPage }) => {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <div className="sm:basis-3/4 flex flex-col items-center justify-center w-full">
+        <div className=" flex flex-col items-center justify-center w-full md:absolute md:top-10 max-md:my-20">
           <h1 className="text-4xl font-playfair font-bold">
             About <span className="text-purple-400">Me</span>
           </h1>
-          <p className="text-center font-opensans text-lg font-medium">
+          <p className="text-center font-opensans text-lg font-medium sm:w-1/2 ">
             I'm a Full Stack Developer with a passion for creating responsive
             and interactive Web applications. I have experience working with{" "}
             <span>
