@@ -13,7 +13,7 @@ function App() {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
-    <div className="app bg-deep-blue">
+    <div className=" bg-deep-blue w-screen ">
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <div className="w-full md:w-full mx-auto md:h-full mt-16">
         {" "}
@@ -43,7 +43,7 @@ function App() {
       </div>
       <Line />
       <Line />
-      <div className="sm:w-5/6 md:w-full mx-auto md:h-full w-screen mt-16 relative">
+      <div className="w-5/6 md:w-full mx-auto md:h-full  mt-16">
         {" "}
         {/* Added top margin for the navbar */}
         <Contact
