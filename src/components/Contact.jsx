@@ -1,34 +1,33 @@
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+
 const Contact = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
+
   return (
-    <section id="contact" className="sm:w-full w-full pt-32 ">
+    <section id="contact" className="pt-16 md:pt-28">
       <motion.div
         className="font-playfair text-3xl mt-11 text-center"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
         transition={{ delay: 0.2, duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, y: -50 },
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <h1>
-          Contact <span className="text-purple-700">Me</span>
+        <h1 className="text-center">
+          Contact <span className="text-purple-700 max-md:hidden">Me</span>
         </h1>
       </motion.div>
       <motion.div
-        className="div"
+        className="mt-8 md:mt-16"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
         transition={{ delay: 0.2, duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, x: 50 },
@@ -37,15 +36,15 @@ const Contact = () => {
       >
         <form
           action="https://formsubmit.co/9020304914af45f0e8671b749ce56c21"
-          className="sm:w-1/2 w-full font-opensans text-lg font-semibold mx-auto"
-          // onSubmit={onSubmit}
+          className="w-4/5 md:w-3/5 mx-auto font-opensans text-lg font-semibold"
           method="POST"
+          onSubmit={handleSubmit((data) => console.log(data))}
         >
           <div className="flex flex-col mt-3">
             <label htmlFor="">Name:-</label>
             <input
               type="text"
-              className=" w-full outline-none px-2 py-4 rounded-md bg-purple-100 text-purple-700 placeholder-opaque-black"
+              className="outline-none px-2 py-4 rounded-md bg-purple-100 text-purple-700 placeholder-opaque-black"
               placeholder="NAME"
               {...register("name", {
                 required: true,
@@ -63,7 +62,7 @@ const Contact = () => {
             <label htmlFor="">Email:-</label>
             <input
               type="text"
-              className=" w-full outline-none px-2 py-4 rounded-md bg-purple-100 text-purple-700 placeholder-opaque-black"
+              className="outline-none px-2 py-4 rounded-md bg-purple-100 text-purple-700 placeholder-opaque-black"
               placeholder="EMAIL"
               {...register("email", {
                 required: true,
@@ -80,7 +79,7 @@ const Contact = () => {
           <div className="flex flex-col mt-3">
             <label htmlFor="">Message:-</label>
             <textarea
-              className="w-full outline-none px-2 py-4 rounded-md bg-purple-100 text-purple-700 placeholder-opaque-black"
+              className="outline-none px-2 py-4 rounded-md bg-purple-100 text-purple-700 placeholder-opaque-black"
               name="message"
               placeholder="MESSAGE"
               rows="4"

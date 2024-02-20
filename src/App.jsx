@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from "./components/Navbar";
@@ -12,11 +13,19 @@ function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
+  useEffect(() => {
+    // Apply overflow-x: hidden to body to prevent horizontal scrolling
+    document.body.style.overflowX = "hidden";
+    return () => {
+      // Restore default overflow-x style when component unmounts
+      document.body.style.overflowX = "auto";
+    };
+  }, []);
+
   return (
-    <div className=" bg-deep-blue w-screen ">
+    <div className="bg-deep-blue w-full overflow-x-hidden">
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <div className="w-full md:w-full mx-auto md:h-full mt-16">
-        {" "}
         {/* Added top margin for the navbar */}
         {isAboveMediumScreens && (
           <DotGroup
@@ -24,17 +33,15 @@ function App() {
             setSelectedPage={setSelectedPage}
           />
         )}
-          <Landing setSelectedPage={setSelectedPage} />
+        <Landing setSelectedPage={setSelectedPage} />
       </div>
       <Line />
       <div className="sm:w-5/6 md:w-full mx-auto md:h-full w-screen mt-16 relative">
-        {" "}
         {/* Added top margin for the navbar */}
         <About selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       </div>
       <Line />
       <div className="sm:w-fit md:w-fit mx-auto md:h-fit w-screen mt-16">
-        {" "}
         {/* Added top margin for the navbar */}
         <Projects
           selectedPage={selectedPage}
@@ -43,9 +50,7 @@ function App() {
       </div>
       <Line />
       <Line />
-      <div className="w-5/6 md:w-full mx-auto md:h-full  mt-16">
-        {" "}
-        {/* Added top margin for the navbar */}
+      <div className="w-full mx-auto md:h-full mt-16 flex justify-center">
         <Contact
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}

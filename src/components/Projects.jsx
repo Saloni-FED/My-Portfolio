@@ -14,7 +14,6 @@ const Projects = () => {
         className="md:w-2/4 mx-auto text-center"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
         transition={{ delay: 0.2, duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, x: 50 },

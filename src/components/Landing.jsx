@@ -9,14 +9,13 @@ const Landing = ({ setSelectedPage }) => {
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center md:h-full gap-16  pt-32"
+      className="md:flex md:justify-between md:items-center md:h-full gap-16  md:pt-48 pt-20"
     >
       <div className="flex flex-col-reverse md:flex-row justify-center gap-10 items-center z-10  mx-auto">
         <div className="z-30 flex flex-col  border-4 border-purple-700 md:border-0 md:border-none basis-2/5 md:w-auto md:mr-8">
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
             variants={{
               hidden: { opacity: 0, x: -50 },

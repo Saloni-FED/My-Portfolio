@@ -9,8 +9,10 @@ const Navbar = ({ setSelectedPage, selectedPage }) => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
   return (
     <nav className={`z-40 w-full fixed top-0 py-3`}>
-      <div className="w-3/4 mx-auto flex justify-between">
-        <h3 className="text-3xl font-extrabold font-playfair text-purple-700">SaFED</h3>
+      <div className="w-3/4  mx-auto flex justify-between">
+        <h3 className="text-3xl font-extrabold font-playfair text-purple-700">
+          SaFED
+        </h3>
         {isAboveSmallScreens ? (
           <div className=" text-sm font-extrabold font-opensans flex justify-center items-center gap-6">
             <Links
@@ -23,7 +25,7 @@ const Navbar = ({ setSelectedPage, selectedPage }) => {
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-          
+
             <Links
               page="Projects"
               selectedPage={selectedPage}
@@ -50,21 +52,25 @@ const Navbar = ({ setSelectedPage, selectedPage }) => {
                     page="Home"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
+                    setIsMenuToggled ={setIsMenuToggled }
                   />
                   <Links
                     page="About"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
+                    setIsMenuToggled ={setIsMenuToggled }
                   />
                   <Links
                     page="Projects"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
+                    setIsMenuToggled ={setIsMenuToggled }
                   />
                   <Links
                     page="Contact"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
+                    setIsMenuToggled ={setIsMenuToggled }
                   />
                 </div>
               </div>
@@ -75,7 +81,6 @@ const Navbar = ({ setSelectedPage, selectedPage }) => {
                 }}
                 className="text-purple-700"
               />
-            
             )}
           </div>
         )}
