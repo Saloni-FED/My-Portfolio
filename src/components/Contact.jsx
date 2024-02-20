@@ -9,7 +9,7 @@ const Contact = () => {
   } = useForm();
 
   return (
-    <section id="contact" className="pt-16 md:pt-28">
+    <section id="contact" className="sm:py-10 md:w-full py-16">
       <motion.div
         className="font-playfair text-3xl mt-11 text-center"
         initial="hidden"
