@@ -12,9 +12,9 @@ const About = ({ selectedPage, setSelectedPage }) => {
   };
 
   return (
-    <section id="about" className="w-full">
+    <section id="about" className="pt-32">
       <motion.div
-        className="flex justify-center md:relative"
+        className="flex justify-center "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -24,7 +24,7 @@ const About = ({ selectedPage, setSelectedPage }) => {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <div className=" flex flex-col items-center justify-center w-full md:absolute md:top-10 max-md:my-20">
+        <div className=" flex flex-col items-center justify-center w-full ">
           <h1 className="text-4xl font-playfair font-bold">
             About <span className="text-purple-400">Me</span>
           </h1>
@@ -52,7 +52,7 @@ const About = ({ selectedPage, setSelectedPage }) => {
               Education
             </TabButtons>
           </div>
-          {tab === "Skills" ?  <Skills /> : <Education/>}
+          {tab === "Skills" ? <Skills /> : <Education />}
         </div>
       </motion.div>
     </section>

@@ -9,7 +9,7 @@ const Navbar = ({ setSelectedPage, selectedPage }) => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
   return (
     <nav className={`z-40 w-full fixed top-0 py-3`}>
-      <div className="w-3/4 mx-auto flex justify-between ">
+      <div className="w-3/4 mx-auto flex justify-between">
         <h3 className="text-3xl font-extrabold font-playfair text-purple-700">SaFED</h3>
         {isAboveSmallScreens ? (
           <div className=" text-sm font-extrabold font-opensans flex justify-center items-center gap-6">
@@ -43,6 +43,7 @@ const Navbar = ({ setSelectedPage, selectedPage }) => {
                   onClick={() => {
                     setIsMenuToggled((prev) => !prev);
                   }}
+                  className="text-white"
                 />
                 <div className="flex flex-col gap-9 ml-[33%] text-2xl text-black">
                   <Links

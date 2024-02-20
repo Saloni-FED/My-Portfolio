@@ -8,7 +8,7 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
   return (
-    <section id="contact" className="w-full absolute top-32 ">
+    <section id="contact" className="sm:w-full w-screen absolute top-32 ">
       <motion.div
         className="font-playfair text-3xl mt-11 text-center"
         initial="hidden"
