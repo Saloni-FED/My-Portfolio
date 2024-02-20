@@ -38,7 +38,7 @@ const Navbar = ({ setSelectedPage, selectedPage }) => {
         ) : (
           <div className="flex justify-center items-center text-3xl font-semibold  transition duration-300">
             {isMenuToggled ? (
-              <div className="fixed right-0 bottom-0 h-full w-full bg-deep-blue ">
+              <div className="fixed right-0 bottom-0 h-full w-full bg-black ">
                 <MdCancel
                   onClick={() => {
                     setIsMenuToggled((prev) => !prev);
