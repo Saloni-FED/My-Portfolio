@@ -22,7 +22,7 @@ const Social = () => {
       </a>
       <a
         className="text-white hover:text-purple-700 transition duration-500"
-        href="https://www.facebook.com"
+        href="https://www.instagram.com/salonipandey66/?next=%2F"
         target="_blank"
         rel="noreferrer"
       >
