@@ -10,7 +10,7 @@ const Navbar = ({ setSelectedPage, selectedPage }) => {
   return (
     <nav className={`z-40 w-full fixed top-0 py-3`}>
       <div className="w-3/4 mx-auto flex justify-between ">
-        <h3 className="text-3xl font-extrabold font-playfair">SaFED</h3>
+        <h3 className="text-3xl font-extrabold font-playfair text-purple-700">SaFED</h3>
         {isAboveSmallScreens ? (
           <div className=" text-sm font-extrabold font-opensans flex justify-center items-center gap-6">
             <Links
@@ -38,7 +38,7 @@ const Navbar = ({ setSelectedPage, selectedPage }) => {
         ) : (
           <div className="flex justify-center items-center text-3xl font-semibold  transition duration-300">
             {isMenuToggled ? (
-              <div className="fixed right-0 bottom-0 h-full bg-black w-[300px]">
+              <div className="fixed right-0 bottom-0 h-full w-full bg-deep-blue ">
                 <MdCancel
                   onClick={() => {
                     setIsMenuToggled((prev) => !prev);
@@ -72,7 +72,9 @@ const Navbar = ({ setSelectedPage, selectedPage }) => {
                 onClick={() => {
                   setIsMenuToggled((prev) => !prev);
                 }}
+                className="text-purple-700"
               />
+            
             )}
           </div>
         )}
