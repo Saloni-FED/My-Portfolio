@@ -56,8 +56,8 @@ const Landing = ({ setSelectedPage }) => {
               Contact Me
             </AnchorLink>
 
-            <div className="rounded font-opensans text-xl text-purple-700 hover:bg-purple-700 hover:text-white  no-underline bg-purple-200 transition duration-500 cursor-pointer ml-3 py-2 px-4">
-              <a href={Resume} download={Resume} className="no-underline text-purple-700 hover:text-white">Resume Download</a>
+            <div className="rounded font-opensans text-xl text-purple-700 hover:text-white hover:bg-purple-700   no-underline bg-purple-200 transition duration-500 cursor-pointer ml-3 py-2 px-4">
+              <a href={Resume} download={Resume} className="no-underline text-purple-700 ">Resume Download</a>
             </div>
           </motion.div>
           <motion.div
