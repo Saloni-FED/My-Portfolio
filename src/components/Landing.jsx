@@ -9,7 +9,7 @@ const Landing = ({ setSelectedPage }) => {
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center md:h-full gap-16  md:pt-48 pt-20 px-4"
+      className="md:flex md:justify-between md:items-center md:h-full gap-16  md:pt-32 pt-20 px-4"
     >
       <div className="flex flex-col-reverse md:flex-row justify-center gap-10 items-center z-10  mx-auto">
         <div className="z-30 flex flex-col  border-4 border-purple-700 md:border-0 md:border-none basis-2/5 md:w-auto md:mr-8">
