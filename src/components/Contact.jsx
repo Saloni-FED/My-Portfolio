@@ -5,10 +5,17 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
+    trigger,
     formState: { errors },
   } = useForm();
 
- 
+  const onSubmit = async (e) => {
+    console.log("~ e", e);
+    const isValid = await trigger();
+    if (!isValid) {
+      e.preventDefault();
+    }
+  };
   return (
     <section id="contact" className="sm:py-10 md:w-full py-16">
       <motion.div
@@ -36,15 +43,17 @@ const Contact = () => {
         }}
       >
         <form
-          action="https://formsubmit.co/salonipandey014@gmail.com"
+          action="https://formsubmit.co/9020304914af45f0e8671b749ce56c21"
           className="w-4/5 md:w-3/5 mx-auto font-opensans text-lg font-semibold"
           method="POST"
-          // target="_blank"
+          target="_blank"
+          onSubmit={onSubmit}
         >
           <div className="flex flex-col mt-3">
             <label htmlFor="">Name:-</label>
             <input
               type="text"
+              name='name'
               className="outline-none px-2 py-4 rounded-md bg-purple-100 text-purple-700 placeholder-opaque-black"
               placeholder="NAME"
               {...register("name", {
@@ -63,6 +72,7 @@ const Contact = () => {
             <label htmlFor="">Email:-</label>
             <input
               type="text"
+              name='email'
               className="outline-none px-2 py-4 rounded-md bg-purple-100 text-purple-700 placeholder-opaque-black"
               placeholder="EMAIL"
               {...register("email", {
